@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const Form = styled.form`
   background-color: ${p => p.theme.colors.backgroundColors};
   color: ${p => p.theme.colors.colorText};
+  width: 320px;
   padding: 10px;
   border-radius: 10px;
   display: flex;
   align-items: flex-end;
-  margin: 0 auto;
+  flex-direction: column;
   box-shadow: 0px 0px 19px 0px rgba(69, 162, 158, 1);
   border-radius: 10px;
 `;
@@ -15,12 +16,11 @@ export const Form = styled.form`
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  &:first-child {
-    margin-right: 10px;
-  }
+  margin-bottom: 10px;
+  width: 100%;
 `;
 export const Span = styled.span`
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 `;
 
 export const Input = styled.input`
@@ -41,7 +41,8 @@ export const Button = styled.button`
   display: block;
   min-width: 130px;
   height: 35px;
-  margin-left: 20px;
+  margin-left: auto;
+  margin-right: auto;
   color: ${p => p.theme.colors.btnСolorText};
   background-color: ${p => p.theme.colors.colorElement};
   border-radius: 20px;
@@ -51,6 +52,6 @@ export const Button = styled.button`
   transition: box-shadow 250ms ease, transform 250ms ease;
   &:hover {
     transform: scale(1.1);
-    box-shadow: ${p => p.theme.boxShadow};
+    box-shadow: ${p => p.theme.sectionShadow};
   }
 `;
